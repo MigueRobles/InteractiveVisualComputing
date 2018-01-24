@@ -18,8 +18,8 @@
 camera{
 
 
-    location <0,10,-19>
-    look_at <50,8,-19>
+    location <-10,1,-10>
+    look_at <0,2,-10>
     rotate<0,0,0> 
     translate<0,0,0>
 
@@ -90,8 +90,8 @@ object{ Perry(right_arm_angle,left_arm_angle,right_leg_angle,left_leg_angle)
 #include "..\Include\AgentPi.inc"                                             
 #end
 
-#declare right_arm_angle = <-45,0,30*sin(pi*clock*2)>; 
-#declare left_arm_angle = <45,0,-30*sin(pi*clock*2)>;
+#declare right_arm_angle = <45,0,30*sin(pi*clock*2)>; 
+#declare left_arm_angle = <-45,0,-30*sin(pi*clock*2)>;
 #declare right_leg_angle = <0,0,-30*sin(pi*clock*2)>;
 #declare left_leg_angle = <0,0,30*sin(pi*clock*2)>;
 
@@ -99,7 +99,7 @@ object{ Perry(right_arm_angle,left_arm_angle,right_leg_angle,left_leg_angle)
 object{ AgentPi(right_arm_angle,left_arm_angle,right_leg_angle,left_leg_angle)
         scale <1,1,1>*1.2
         rotate<0,0,0> 
-        translate<50-clock*5,0.5,-25>
+        translate<50-clock*5,0,-25>
     }
 //------------------------------------------------------------------------------------------------------------------------------------------------Phineas****
 #ifndef( Phineas_Inc_Temp)

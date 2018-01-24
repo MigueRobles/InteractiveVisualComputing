@@ -11,8 +11,8 @@
 camera{
 
 
-    location <7,6,1>
-    look_at <0,5,1>
+    location <5,6,1>
+    look_at <0,3,1>
     rotate<10*clock,-90*clock,0> 
     translate<0,-.4*clock,0>
 
@@ -65,7 +65,7 @@ background{Blue}
                         }
               scale<1,1,1>*proportion  rotate<0, 0,0> translate<-0.7,0,0>
               } // ---------------------------------------------------------
-        scale<1,1,1>*proportion  rotate<90,0,0> translate c+<-0.3,3.5,3.4>      
+        scale<1,1,1>*proportion  rotate<90,0,0> translate c+<-0.3,3,3.4>      
     }  
     
     
@@ -92,7 +92,7 @@ background{Blue}
                         }
               scale<1,1,1>*proportion  rotate<0, 0,0> translate<-0.7,0,0>
               } // ---------------------------------------------------------
-        scale<1,1,1>*proportion  rotate<-90,0,0> translate c+<-0.3,4,-1.4>      
+        scale<1,1,1>*proportion  rotate<-90,0,0> translate c+<-0.3,3.4,-1.4>      
     }
     
     
@@ -152,58 +152,60 @@ background{Blue}
           
         }
     //Left eye
-    
-    sphere { c, 0.3 
-    
-            texture { pigment{ color White}
-                      finish { phong 1.0 reflection 0.00}
-                    } // end of texture
-    
-              scale<1,1,1>*proportion  rotate<0,0,0>  translate<0.2,3.4,-1.6>  
-           }  // end of sphere -----------------------------------
-           //Iris1
-                sphere { c, 0.1 
-                
-                        texture { pigment{ color Black}
-                                  finish { phong 1.0 reflection 0.00}
-                                } // end of texture
-                
-                          scale<1,1,1>*proportion  rotate<0,0,0>  translate<-0.05,3.4,-1.6>  
-                       }  // end of sphere -----------------------------------  
+    union{
+        sphere { <0,0,0>, 0.3 
+        
+                texture { pigment{ color White}
+                          finish { phong 1.0 reflection 0.00}
+                        } // end of texture
+        
+                  scale<1,1,1>*proportion  rotate<0,0,0>  translate <0,0,0> 
+               }  // end of sphere -----------------------------------
+               //Iris1
+                    sphere { c, 0.1 
+                    
+                            texture { pigment{ color Black}
+                                      finish { phong 1.0 reflection 0.00}
+                                    } // end of texture
+                    
+                              scale<1,1,1>*proportion  rotate<0,0,0>  translate c+<-0.3,0,0>  
+                           }  // end of sphere -----------------------------------  
+                    scale<1,1,1>*proportion  rotate<0,0,0>  translate c +<-0.85,4,0.55>     
+                    }                       
                        
                        
                        
+    //Rigth eye
+       union{
+        sphere { <0,0,0>, 0.3 
+        
+                texture { pigment{ color White}
+                          finish { phong 1.0 reflection 0.00}
+                        } // end of texture
+        
+                  scale<1,1,1>*proportion  rotate<0,0,0>  translate <0,0,0> 
+               }  // end of sphere -----------------------------------
+               //Iris1
+                    sphere { c, 0.1 
+                    
+                            texture { pigment{ color Black}
+                                      finish { phong 1.0 reflection 0.00}
+                                    } // end of texture
+                    
+                              scale<1,1,1>*proportion  rotate<0,0,0>  translate c+<-0.3,0,0>  
+                           }  // end of sphere -----------------------------------  
+                    scale<1,1,1>*proportion  rotate<0,0,0>  translate c +<-0.85,4,1.4>     
+                    }                       
                        
-                       
-    //Rigth eye       
-    sphere { c, 0.3 
-    
-            texture { pigment{ color White}
-                      finish { phong 1.0 reflection 0.00}
-                    } // end of texture
-    
-              scale<1,1,1>*proportion  rotate<0,0,0>  translate<0.2,3.4,-0.4>  
-           }  // end of sphere ----------------------------------- 
-    
-                       
-            //Iris2       
-            sphere { c, 0.1 
-            
-                    texture { pigment{ color  Black}
-                              finish { phong 1.0 reflection 0.00}
-                            } // end of texture
-            
-                     scale<1,1,1>*proportion  rotate<0,0,0>  translate<-0.05,3.4,-0.4>  
-                   }  // end of sphere ----------------------------------- 
-           
+               
     // CejaRigth
     
-    cylinder { c+<0,4,0>,c+<0,4,0.55>, 0.05
+    cylinder { c+<0,4,0>,c+<0,4,0.55>, 0.08
                texture { pigment { color Black}
                        //normal  { bumps 0.5 scale <0.25, 0.005,0.005>}  
                          finish  { phong 0.5 reflection{ 0.00 metallic 0.00} } 
                        } // end of texture
-               scale <1,1,1>*proportion rotate<-16,0,0> translate<0,-0.16,0.7>
+               scale <1,1,1>*proportion rotate<-16,0,0> translate<-1,0.5,2.2>
              } // end of cylinder  ------------------------------------
     
     
@@ -211,18 +213,13 @@ background{Blue}
            
     // CejaLeft
     
-    cylinder { c+<0,4,0>,c+<0,4,0.55>, 0.05
+     cylinder { c+<0,4,0>,c+<0,4,0.55>, 0.08
                texture { pigment { color Black}
                        //normal  { bumps 0.5 scale <0.25, 0.005,0.005>}  
                          finish  { phong 0.5 reflection{ 0.00 metallic 0.00} } 
                        } // end of texture
-               scale <1,1,1>*proportion rotate<16,0,0> translate<0,0.01,-3.26>
+               scale <1,1,1>*proportion rotate<16,0,0> translate<-1,0.65,-0.8>
              } // end of cylinder  ------------------------------------
-    
-    
-    
-    
-    
     
     
            
@@ -235,7 +232,7 @@ background{Blue}
                    //normal { radial sine_wave frequency 30 scale 0.25 }
                      finish { phong 1 }
                     }
-            scale<1,1,1>*proportion  rotate<0, 0,0> translate<0,3,0>
+            scale<1,1,1>*proportion  rotate<0, 0,0> translate<-0.9,3.5,2>
           } // ---------------------------------------------------------
     
     //Nose            
@@ -244,24 +241,24 @@ background{Blue}
                     texture { pigment{ color Orange } 
                     finish { phong 1.0 }
                   }
-                  scale<1,1,1>*proportion rotate<0, 0,0> translate<0,3,0>
+                  scale<1,1,1>*proportion rotate<0, 0,0> translate<-1,3.5,2>
                    }
                    
                    
     //Cola 
     
     object{ // Round_Box(A, B, WireRadius, UseMerge)
-            Round_Box( <0,0,0>,<2.5,-0.4,-1.2>, 0.1   , 0)  
+            Round_Box( <0,0,0>,<2,-0.3,-1.2>, 0.1   , 0)  
              
             texture{ pigment{ color Red}
                    //normal { radial sine_wave frequency 30 scale 0.25 }
                      finish { phong 1 }
                     }
-            scale<1,1,1>*proportion  rotate<0, 0,0> translate<0,0,0>
+            scale<1,1,1>*proportion  rotate<0, 0,0> translate<0,2,1.65>
           } // ---------------------------------------------------------
           
     //Hat
-    
+ union{   
     object{ // Round_Box(A, B, WireRadius, UseMerge)
             Round_Box(c+<-0.4,0,-1.2>,c+<1,0.2,1>, 0.1   , 0)  
                                   
@@ -283,8 +280,8 @@ background{Blue}
                     }
             scale<1,1,1>*proportion  rotate<0, 0,0> translate<0.48,4,-0.87>
           } // ---------------------------------------------------------
-          
-                     
+         scale<1,1,1>*proportion  rotate<0, 0,0> translate<-1,0.8,2>   
+ }                   
  scale<1,1,1>*proportion  rotate<0, 0,0> translate<0,2,0>   
 
 }

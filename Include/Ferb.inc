@@ -4,17 +4,19 @@
 
 #macro Ferb(left_elbow_angle, left_arm_angle, right_elbow_angle, right_arm_angle, left_leg_angle, right_leg_angle) 
 
+    #declare c_f= <0,0,0>;
+
     //Physiognomy
     #declare head_size = 6;
     #declare body_size = 5.5;
     
     //Face factions positions variables
-    #declare face_up_position = c+<0,head_size,0>;
-    #declare face_down_position = c;
+    #declare face_up_position = c_f+<0,head_size,0>;
+    #declare face_down_position = c_f;
     #declare radius_up_face = 1.3;
     #declare radius_down_face = 0.8;
-    #declare right_eye_position = c+<0.6,4,-0.9>;
-    #declare left_eye_position = c+<-0.4,4,-0.9>;
+    #declare right_eye_position = c_f+<0.6,4,-0.9>;
+    #declare left_eye_position = c_f+<-0.4,4,-0.9>;
     #declare eye_radius = 0.75;
     #declare nose_position_corner1 = left_eye_position+<-0.3,-2,-1>;
     #declare nose_position_corner2 = right_eye_position+<0.1,-0.75,0>;
@@ -128,7 +130,7 @@
             cone{
                 base_hair_position,
                 0.5,
-                base_hair_position+<0,0.4,-8>
+                base_hair_position+<0,0.4,-3>
                 0
                 texture{
                     pigment{Green}
@@ -138,7 +140,7 @@
             cone{
                 base_hair_position+<-0.9,0,0>,
                 0.5,
-                base_hair_position+<0,0.2,-8>
+                base_hair_position+<0,0.2,-3>
                 0
                 texture{
                     pigment{Green}
@@ -148,7 +150,7 @@
             cone{
                 base_hair_position+<0.2,0,0>
                 0.8,
-                base_hair_position+<1.2,0.5,-5>
+                base_hair_position+<1.2,0.5,-3>
                 0
                 texture{
                     pigment{Green}
@@ -157,7 +159,7 @@
             cone{
                 base_hair_position+<-0.3,0,0>
                 0.8
-                base_hair_position+<-1,0.3,-3>,
+                base_hair_position+<-1,0.3,-2.8>,
                 0
                 texture{
                     pigment{Green}
@@ -166,7 +168,25 @@
             cone{
                 base_hair_position+<0.3,0,-0.3>
                 0.8
-                base_hair_position+<0.3,0.5,-1.2>
+                base_hair_position+<0.3,0.5,-1.1>
+                0
+                texture{
+                    pigment{Green}
+                }
+            }
+            cone{
+                base_hair_position+<0,0,0.3>
+                0.8
+                base_hair_position+<0,0.8,0>
+                0
+                texture{
+                    pigment{Green}
+                }
+            }
+            cone{
+                base_hair_position+<0.6,0,0>
+                0.8
+                base_hair_position+<0.3,0.8,0>
                 0
                 texture{
                     pigment{Green}
