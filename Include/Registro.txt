@@ -1,0 +1,31 @@
+Planos
+
+Plano 1
+
+    location <50,1500-100*clock,-200>
+    look_at <50,0,0>
+    rotate<0,0,0> 
+    translate<0,0,0>
+    
+    Initial_Frame=1
+    Final_Frame=98
+    Initial_Clock=0
+    Final_Clock=10 
+            
+Plano2
+
+        
+
+
+    location <50+4*clock,500-48.5*clock,-200+19.2*clock>
+    look_at <50,0,-8*clock>
+    rotate<0,0,0> 
+    translate<0,0,0>
+    
+    Initial_Frame=1
+    Final_Frame=50
+    Initial_Clock=0
+    Final_Clock=10
+
+ 
+

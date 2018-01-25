@@ -18,26 +18,17 @@
 camera{
 
 
-    location <0,10,-19>
-    look_at <50,8,-19>
+    location <50+4*clock,500-48.5*clock,-200+19.2*clock>
+    look_at <50,0,-0.8*clock>
     rotate<0,0,0> 
     translate<0,0,0>
 
-}  
-
-light_source { 
-        <0,10,0>
-        color White 
-}
-light_source { 
-        <0,-10,0>
-        color White 
 } 
 
 
 
 // sun ---------------------------------------------------------------------
-light_source{<-1500,2000,-2500> color White}
+light_source{<-1500,2000,2500> color White}
 
 // sky -------------------------------------------------------------- 
 plane{<0,1,0>,1 hollow  
@@ -50,7 +41,7 @@ plane{<0,1,0>,1 hollow
                         scale<1,1,1.5>*2.5  translate< 0,0,0>
                        }
                 finish {ambient 1 diffuse 0} }      
-       scale 10000}
+       scale 10000}           /*
 // fog on the ground -------------------------------------------------
 fog { fog_type   2
       distance   50
@@ -59,7 +50,7 @@ fog { fog_type   2
       fog_alt    1.5
       turbulence 1.8
     }
-
+               */
 // ground ------------------------------------------------------------
 plane { <0,1,0>, 0 
         texture{ pigment{ color rgb<0.35,0.65,0.0>*0.72 }
@@ -81,9 +72,10 @@ plane { <0,1,0>, 0
 
 object{ Perry(right_arm_angle,left_arm_angle,right_leg_angle,left_leg_angle)
         scale <1,1,1>
-        rotate<0,0,0> 
-        translate<50-clock*5,2.1,-4>
+        rotate<0,180,0> 
+        translate<45,2.1,-9>
     }
+    /*
  //--------------------------------------------------------------------------------------------------------------------------------------------AgentPi****
                      
 #ifndef( AgentPi_Inc_Temp)
@@ -100,7 +92,7 @@ object{ AgentPi(right_arm_angle,left_arm_angle,right_leg_angle,left_leg_angle)
         scale <1,1,1>*1.2
         rotate<0,0,0> 
         translate<50-clock*5,0.5,-25>
-    }
+    }            */
 //------------------------------------------------------------------------------------------------------------------------------------------------Phineas****
 #ifndef( Phineas_Inc_Temp)
 #include "..\Include\Phineas.inc"                                             
@@ -118,8 +110,8 @@ object{ AgentPi(right_arm_angle,left_arm_angle,right_leg_angle,left_leg_angle)
  
 object{ Phineas(left_arm_angle,left_elbow_angle,right_arm_angle,right_elbow_angle, left_leg_angle, left_knee_angle, right_leg_angle, right_knee_angle, head_angle)
         scale <1,1,1>
-        rotate<0,90,0> 
-        translate<50-clock*5,-10,-15>
+        rotate<0,180,0> 
+        translate<50,-10,-15>
     }
 
 
@@ -141,11 +133,11 @@ object{ Phineas(left_arm_angle,left_elbow_angle,right_arm_angle,right_elbow_angl
  
 object{ Ferb(left_arm_angle,left_elbow_angle,right_arm_angle,right_elbow_angle, left_leg_angle, right_leg_angle)
         scale <1,1,1>
-        rotate<0,90,0> 
-        translate<50-clock*5,9,0>
+        rotate<0,0,0> 
+        translate<49,9,0>
     }
 
-                                                /*
+                                                
 //------------------------------------------------------------------------------------------------------------------------------------------------Houses****   
 
 
@@ -186,8 +178,8 @@ object{ Ferb(left_arm_angle,left_elbow_angle,right_arm_angle,right_elbow_angle, 
 //---------------------------------------------------------------------------------------
 #include "..\Include\House_1_0.inc" 
 //-------------------------------------------------------------------------------------// 
-#for (j, -20, 20,10)   
-    #for (i, -16, 16, 8) 
+#for (j, -80, 80,10)   
+    #for (i, -80, 80, 8) 
         #if ( i = 0 & j = 0 )
         
         #else      
@@ -207,9 +199,9 @@ object{ Ferb(left_arm_angle,left_elbow_angle,right_arm_angle,right_elbow_angle, 
     #end // --------------- end of #for loop
 #end // --------------- end of #for loop   
 
-                   
-                                           */
-//--------------------------------------------------------------------------------------------------------------------------Tree
+                                                    
+                                           
+//---------------------------------------------------------------------------------------------------------------------------------------------------Tree****
 union{
     sphere { <0,0,0>, 1.00 
              texture { pigment{ color rgb<0.35,0.65,0.0>*0.9} //color rgb<0.2,0.7,0.05> }                                     
@@ -277,4 +269,21 @@ union{
            } // ---------------------------------------------------------
            
       scale<1,1,1>  rotate<0, 0,0> translate<-12,0,100>   
-}                           
+}
+           /*
+//--------------------------------------------------------------------------------------------------------------------------------------------------Cage****     
+                                                                                                                                    
+
+#ifndef( Cage_Inc_Temp)
+#include "..\Include\Cage.inc"                                             
+#end
+
+ 
+object{ Cage()
+        scale <1,1,1>
+        rotate<0,90,0> 
+        translate<45-clock*5,0,6>
+    }
+    
+                */
+                      
