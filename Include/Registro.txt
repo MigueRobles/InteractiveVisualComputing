@@ -1,6 +1,32 @@
 Planos
+Plano 0   RENDERIZAR PLANO 1 SIN CASAS
+
+    Initial_Frame=1
+    Final_Frame=200
+    Initial_Clock=0
+    Final_Clock=1
+     
+    location <50,2500,-200>
+    look_at <50,2550,0>
+    rotate<0,0,0> 
+    translate<0,0,0>
 
 Plano 1
+
+    Initial_Frame=1
+    Final_Frame=50
+    Initial_Clock=0
+    Final_Clock=10
+
+    location <50,2500,-200>
+    look_at <50,2550-255*clock,0>
+    rotate<0,0,0> 
+    translate<0,-100*clock,0>
+
+
+
+       
+Plano 2
 
     location <50,1500-100*clock,-200>
     look_at <50,0,0>
@@ -12,13 +38,29 @@ Plano 1
     Initial_Clock=0
     Final_Clock=10 
             
-Plano2
+Plano 3
 
         
 
 
-    location <50+4*clock,500-48.5*clock,-200+19.2*clock>
-    look_at <50,0,-8*clock>
+    location <50+4*clock,500-40*clock,-200+19.2*clock>
+    look_at <50,0.6*clock,-0.8*clock>
+    rotate<0,0,0> 
+    translate<0,0,0>
+    
+    Initial_Frame=1
+    Final_Frame=50
+    Initial_Clock=0
+    Final_Clock=10
+    
+    
+Plano 3
+
+        
+
+
+    location <90,20,-8>
+    look_at <50,6,-8>
     rotate<0,0,0> 
     translate<0,0,0>
     

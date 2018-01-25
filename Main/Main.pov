@@ -17,9 +17,8 @@
         
 camera{
 
-
-    location <50+4*clock,500-48.5*clock,-200+19.2*clock>
-    look_at <50,0,-0.8*clock>
+    location <100,20,-8>
+    look_at <50,6,-8>
     rotate<0,0,0> 
     translate<0,0,0>
 
@@ -38,7 +37,7 @@ plane{<0,1,0>,1 hollow
                                      [0.70 rgb <1,1,1>]
                                      [0.85 rgb <0.25,0.25,0.25>]
                                      [1.0 rgb <0.5,0.5,0.5>]}
-                        scale<1,1,1.5>*2.5  translate< 0,0,0>
+                        scale<1,1,1.5>*2.5  translate< 0,clock,0>
                        }
                 finish {ambient 1 diffuse 0} }      
        scale 10000}           /*
@@ -73,11 +72,11 @@ plane { <0,1,0>, 0
 object{ Perry(right_arm_angle,left_arm_angle,right_leg_angle,left_leg_angle)
         scale <1,1,1>
         rotate<0,180,0> 
-        translate<45,2.1,-9>
+        translate<45,1.7,-9>
     }
-    /*
+    
  //--------------------------------------------------------------------------------------------------------------------------------------------AgentPi****
-                     
+                                             /*
 #ifndef( AgentPi_Inc_Temp)
 #include "..\Include\AgentPi.inc"                                             
 #end
@@ -92,7 +91,7 @@ object{ AgentPi(right_arm_angle,left_arm_angle,right_leg_angle,left_leg_angle)
         scale <1,1,1>*1.2
         rotate<0,0,0> 
         translate<50-clock*5,0.5,-25>
-    }            */
+    }                                 */
 //------------------------------------------------------------------------------------------------------------------------------------------------Phineas****
 #ifndef( Phineas_Inc_Temp)
 #include "..\Include\Phineas.inc"                                             
@@ -110,7 +109,7 @@ object{ AgentPi(right_arm_angle,left_arm_angle,right_leg_angle,left_leg_angle)
  
 object{ Phineas(left_arm_angle,left_elbow_angle,right_arm_angle,right_elbow_angle, left_leg_angle, left_knee_angle, right_leg_angle, right_knee_angle, head_angle)
         scale <1,1,1>
-        rotate<0,180,0> 
+        rotate<0,140,0> 
         translate<50,-10,-15>
     }
 
@@ -133,11 +132,11 @@ object{ Phineas(left_arm_angle,left_elbow_angle,right_arm_angle,right_elbow_angl
  
 object{ Ferb(left_arm_angle,left_elbow_angle,right_arm_angle,right_elbow_angle, left_leg_angle, right_leg_angle)
         scale <1,1,1>
-        rotate<0,0,0> 
-        translate<49,9,0>
+        rotate<0,40,0> 
+        translate<50,8.7,2>
     }
 
-                                                
+                                                                                                /*
 //------------------------------------------------------------------------------------------------------------------------------------------------Houses****   
 
 
@@ -199,7 +198,7 @@ object{ Ferb(left_arm_angle,left_elbow_angle,right_arm_angle,right_elbow_angle, 
     #end // --------------- end of #for loop
 #end // --------------- end of #for loop   
 
-                                                    
+                                                                                                   */
                                            
 //---------------------------------------------------------------------------------------------------------------------------------------------------Tree****
 union{
