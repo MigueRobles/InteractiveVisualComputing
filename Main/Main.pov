@@ -136,7 +136,7 @@ object{ Ferb(left_arm_angle,left_elbow_angle,right_arm_angle,right_elbow_angle, 
         translate<50,8.7,2>
     }
 
-                                                                                                /*
+                                                                                                /
 //------------------------------------------------------------------------------------------------------------------------------------------------Houses****   
 
 
@@ -198,7 +198,7 @@ object{ Ferb(left_arm_angle,left_elbow_angle,right_arm_angle,right_elbow_angle, 
     #end // --------------- end of #for loop
 #end // --------------- end of #for loop   
 
-                                                                                                   */
+                                                                                                  
                                            
 //---------------------------------------------------------------------------------------------------------------------------------------------------Tree****
 union{
